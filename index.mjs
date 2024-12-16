@@ -23,6 +23,14 @@ console.log(isTwoOdd);
 const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
 console.log(isOver25);
 
+//==================================================================================//
+// Change the way that isOver25 calculates so that we do not need to use the NOT
+// operator (!) in other logic comparisons. Rename the variable as appropriate.
+const isUnder25 = n1 < 25 || n2 < 25 || n3 < 25 || n4 < 25;
+console.log(isUnder25);
+
+//==================================================================================//
+
 // Check four: all unique numbers
 // This is long, and there are more efficient
 // ways of handling it with other data structures
@@ -34,7 +42,8 @@ console.log(isUnique);
 // for convenience. Note how we negate isOver25 using
 // the ! operator. We could also have tested for
 // "isUnder25" as an alternative.
-const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
+// const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
+const isValid = isSum50 && isTwoOdd && isUnder25 && isUnique;
 
 // Finally, log the results.
 console.log(isValid);
