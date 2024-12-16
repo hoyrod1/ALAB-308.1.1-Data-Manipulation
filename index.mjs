@@ -114,8 +114,8 @@ const fuelCostDollarPerGallon = 3;
 const fuelBudgetInDollars = 175;
 // Total amount of fuel in gallons
 let totalGallons4Trip = 0;
-// Car speed
-let MPH = 70;
+// Fuel cost for entire trip
+let fuelCostForTrip = 0;
 //----------------------------------------------------------------------------------//
 // At 55 miles per hour, you get 30 miles per gallon.
 const fiftyFiveMPH = 55;
@@ -129,30 +129,95 @@ const twentyEightGallons = 28;
 const seventyMPH = 70;
 const twentyThreeGallons = 23;
 //----------------------------------------------------------------------------------//
+// Change the car speed to from 55, 60 or 70 to see th results
+let MPH = 55;
+
 if (fiftyFiveMPH === MPH) {
   totalGallons4Trip = tripDistanceInMiles / thirtyGallons;
   console.log(
-    `Traveling at the speed of 55 miles per hour the trip will require ${Math.floor(
+    `Traveling at the speed of 55 miles per hour the trip will require ${Math.ceil(
       totalGallons4Trip
-    )} Gallons.`
+    )} Gallons and will take approximately ${Math.ceil(
+      tripDistanceInMiles / fiftyFiveMPH
+    )} hours.`
   );
+  // Calculate fuel cost for the entire trip
+  fuelCostForTrip = totalGallons4Trip * fuelCostDollarPerGallon;
+  if (fuelCostForTrip > fuelBudgetInDollars) {
+    console.log(
+      `The calculated fuel cost required for your trip is $${Math.ceil(
+        fuelCostForTrip
+      )}. You do not have enough money for the trip`
+    );
+  } else {
+    console.log(
+      `The calculated fuel cost required for your trip is $${Math.ceil(
+        fuelCostForTrip
+      )}, so you will still have $${Math.ceil(
+        fuelBudgetInDollars - fuelCostForTrip
+      )} remaining in your fuel budget`
+    );
+  }
 }
+//---------------------------------------------------------------------------------//
 
+//---------------------------------------------------------------------------------//
+// Calculate the amount of fuel required for the trip
 if (sixtyMPH === MPH) {
   totalGallons4Trip = tripDistanceInMiles / twentyEightGallons;
   console.log(
-    `Traveling at the speed of 60 miles per hour the trip will require ${Math.floor(
+    `Traveling at the speed of 60 miles per hour the trip will require ${Math.ceil(
       totalGallons4Trip
-    )} Gallons.`
+    )} Gallons and will take approximately ${Math.ceil(
+      tripDistanceInMiles / sixtyMPH
+    )} hours.`
   );
+  // Calculate fuel cost for the entire trip
+  fuelCostForTrip = totalGallons4Trip * fuelCostDollarPerGallon;
+  if (fuelCostForTrip > fuelBudgetInDollars) {
+    console.log(
+      `The calculated fuel cost required for your trip is $${Math.ceil(
+        fuelCostForTrip
+      )}. You do not have enough money for the trip`
+    );
+  } else {
+    console.log(
+      `The calculated fuel cost required for your trip is $${Math.ceil(
+        fuelCostForTrip
+      )}, you still have $${Math.ceil(
+        fuelBudgetInDollars - fuelCostForTrip
+      )} remaining in your fuel budget`
+    );
+  }
 }
+//---------------------------------------------------------------------------------//
 
+//---------------------------------------------------------------------------------//
 if (seventyMPH === MPH) {
   totalGallons4Trip = tripDistanceInMiles / twentyThreeGallons;
   console.log(
-    `Traveling at the speed of 60 miles per hour the trip will require ${Math.floor(
+    `Traveling at the speed of 60 miles per hour the trip will require ${Math.ceil(
       totalGallons4Trip
-    )} Gallons.`
+    )} Gallons and will take approximately ${Math.ceil(
+      tripDistanceInMiles / seventyMPH
+    )} hours.`
   );
+  // Calculate fuel cost for the entire trip
+  fuelCostForTrip = totalGallons4Trip * fuelCostDollarPerGallon;
+  if (fuelCostForTrip > fuelBudgetInDollars) {
+    console.log(
+      `The calculated fuel cost required for your trip is $${Math.ceil(
+        fuelCostForTrip
+      )}. You do not have enough money for the trip`
+    );
+  } else {
+    console.log(
+      `The calculated fuel cost required for your trip is $${Math.ceil(
+        fuelCostForTrip
+      )}, you still have $${Math.ceil(
+        fuelBudgetInDollars - fuelCostForTrip
+      )} remaining in your fuel budget`
+    );
+  }
 }
 //==================================================================================//
