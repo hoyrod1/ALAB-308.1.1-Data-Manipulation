@@ -103,3 +103,56 @@ console.log(
   `The result after subtract the first number from the second number, Multiply the result by the third number and finding the remainder by dividing the result by the fourth number is ${arithmeticChain}.`
 );
 //==================================================================================//
+
+//------------------------------ Part-2 Practical Math ------------------------------//
+//==================================================================================//
+// The total trip distance in miles
+const tripDistanceInMiles = 1500;
+// Fuel cost per gallon
+const fuelCostDollarPerGallon = 3;
+// The fuel budget for the trip
+const fuelBudgetInDollars = 175;
+// Total amount of fuel in gallons
+let totalGallons4Trip = 0;
+// Car speed
+let MPH = 70;
+//----------------------------------------------------------------------------------//
+// At 55 miles per hour, you get 30 miles per gallon.
+const fiftyFiveMPH = 55;
+const thirtyGallons = 30;
+//----------------------------------------------------------------------------------//
+// At 60 miles per hour, you get 28 miles per gallon.
+const sixtyMPH = 60;
+const twentyEightGallons = 28;
+//----------------------------------------------------------------------------------//
+// At 70 miles per hour, you get 23 miles per gallon.
+const seventyMPH = 70;
+const twentyThreeGallons = 23;
+//----------------------------------------------------------------------------------//
+if (fiftyFiveMPH === MPH) {
+  totalGallons4Trip = tripDistanceInMiles / thirtyGallons;
+  console.log(
+    `Traveling at the speed of 55 miles per hour the trip will require ${Math.floor(
+      totalGallons4Trip
+    )} Gallons.`
+  );
+}
+
+if (sixtyMPH === MPH) {
+  totalGallons4Trip = tripDistanceInMiles / twentyEightGallons;
+  console.log(
+    `Traveling at the speed of 60 miles per hour the trip will require ${Math.floor(
+      totalGallons4Trip
+    )} Gallons.`
+  );
+}
+
+if (seventyMPH === MPH) {
+  totalGallons4Trip = tripDistanceInMiles / twentyThreeGallons;
+  console.log(
+    `Traveling at the speed of 60 miles per hour the trip will require ${Math.floor(
+      totalGallons4Trip
+    )} Gallons.`
+  );
+}
+//==================================================================================//
