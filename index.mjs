@@ -61,3 +61,9 @@ console.log(dontDoThis);
 const isDivisibleBy5 = n1 % 5 === 0 && n2 % 5 === 0 && n3 % 5 === 0 && n4 % 5 === 0;
 console.log(isDivisibleBy5);
 //==================================================================================//
+
+//==================================================================================//
+// Check if the first number is larger than the last. Cache the result in a variable.
+const n1LargerThanN4 = n1 > n4;
+console.log(n1LargerThanN4);
+//==================================================================================//
