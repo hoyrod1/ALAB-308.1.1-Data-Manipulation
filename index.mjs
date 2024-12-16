@@ -100,7 +100,7 @@ console.log(
 // Find the remainder of dividing the result by the fourth number.
 const arithmeticChain = ((n2 - n1) * n3) / n4;
 console.log(
-  `The result after subtract the first number from the second number, Multiply the result by the third number and finding the remainder by dividing the result by the fourth number is ${arithmeticChain}.`
+  `The result after subtracting the first number from the second number, Multiply the result by the third number and finding the remainder by dividing the result by the fourth number is ${arithmeticChain}.`
 );
 //==================================================================================//
 
